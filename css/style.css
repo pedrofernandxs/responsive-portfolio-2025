@@ -1,0 +1,1351 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /* ======================================= ALTURA DO CABEÇALHO =======================================*/
+    --header-altura: 3rem;
+
+   /* ======================================= CORES DO PROJETO =======================================*/
+    --cor-principal: 236; /*MUDA A COR DE TODO O PROJETO*/
+    --primeira-cor: hsl(var(--cor-principal), 69%, 61%);
+    --primeira-cor-secundaria: hsl(var(--cor-principal), 69%, 61%);
+    --primeira-cor-alternativa : hsl(var(--cor-principal), 57%, 53%);
+    --primeira-cor-brilho: hsl(var(--cor-principal), 92%, 85%);
+    --cor-titulo: hsl(var(--cor-principal), 8%, 15%);
+    --cor-texto: hsl(var(--cor-principal), 8%, 45%);
+    --cor-texto-brilho: hsl(var(--cor-principal), 8%, 65%);
+    --cor-input: hsl(var(--cor-principal), 70%, 96%);
+    --cor-body: hsl(var(--cor-principal), 60%, 99%);
+    --cor-container: #FFF;
+
+    /* ======================================= FONT-FAMILY DO PROJETO =======================================*/
+    --body-font: 'Poppins', sans-serif;
+
+    /* ======================================= TAMANHO DAS FONTES DO PROJETO =======================================*/
+    --grande-fontsize: 2rem;
+    --h1-fontsize: 1.5rem;
+    --h2-fontsize: 1.25rem;
+    --h3-fontsize: 1.125rem;
+    --normal-fontsize: .938rem;
+    --pequena-fontsize: .813rem;
+    --minima-fontsize: .75rem;
+
+    /* ======================================= FONT WEIGTH DO PROJETO =======================================*/
+    --font-media: 500;
+    --font-semi-media: 600;
+
+   /* ======================================= MARGIN BOTTOM =======================================*/
+    --m-b-0-25: .25rem;
+    --m-b-0-5: .5rem;
+    --m-b-0-75: .75rem;
+    --m-b-1: 1rem;
+    --m-b-1-5: 1.5rem;
+    --m-b-2: 2rem;
+    --m-b-2-5: 2.5rem;
+    --m-b-3: 3rem;
+
+    /* ======================================= Z-INDEX / DETERMINA QUEM FICA ACIMA DE QUEM =======================================*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+/* ======================================= FONTSIZE PARA TELAS GRANDES =======================================*/
+@media screen and (min-width: 968px) {
+    :root {
+        --grande-fontsize: 3rem;
+        --h1-fontsize: 2.25rem;
+        --h2-fontsize: 1.5rem;
+        --h3-fontsize: 1.25rem;
+        --normal-fontsize: 1rem;
+        --pequena-fontsize: .875rem;
+        --minima-fontsize: .813rem;
+    }
+}
+
+/* ======================================= DARK THEMES =======================================*/
+
+.navbar-btns {
+    display: flex;
+    align-items: center;
+}
+
+.change-theme {
+    font-size: 1.25rem;
+    color: var(--cor-titulo);
+    margin-right: var(--m-b-1);
+    cursor: pointer;
+}
+
+.change-theme:hover {
+    color: var(--primeira-cor);
+}
+
+/* ======================================= VARIAVEIS DO DARK THEME =======================================*/
+
+body.dark-theme {
+    --primeira-cor-secundaria: hsl(var(--cor-principal), 30%, 8%);
+    --cor-titulo: hsl(var(--cor-principal), 8%, 95%);
+    --cor-texto: hsl(var(--cor-principal), 8%, 75%);
+    --cor-input: hsl(var(--cor-principal), 29%, 16%);
+    --cor-body: hsl(var(--cor-principal), 28%, 12%);
+    --cor-container: hsl(var(--cor-principal), 29%, 16%);
+}
+
+
+/* ======================================= BASE E RESET DO PROJETO =======================================*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth; /*ROLAGEM FLUIDA DA TELA*/
+}
+
+body {
+    margin: 0 0 var(--header-altura) 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-fontsize);
+    background-color: var(--cor-body);
+    color: var(--cor-texto);
+}
+
+h1, h2, h3, h4 {
+    color: var(--cor-titulo);
+    font-weight: var(--font-semi-media);
+}
+
+ul {
+    list-style: none; /* TIRAR ESTILIZAÇÃO DA LISTA / NAVBAR*/
+
+}
+
+a {
+    text-decoration: none; /* TIRAR ESTILIZAÇÃO DOS LINKS */
+}
+
+/* ======================================= TAMANHO DAS IMAGENS =======================================*/
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ 
+
+/* ======================================= SECTIONS DO PROJETO =======================================*/
+.section {
+    padding: 2rem 0 3rem;
+}
+
+.section-titulo {
+    font-size: var(--h1-fontsize);
+    color: var(--cor-titulo);
+}
+
+.section-subtitulo {
+    display: block;
+    font-size: var(--pequena-fontsize);
+    margin-bottom: var(--m-b-3);
+}
+
+.section-titulo,
+.section-subtitulo {
+    text-align: center;
+}
+
+/* ======================================= ESTILIZAÇÃO CONTAINERS =======================================*/.container {
+    max-width: 768px;
+    margin-left: var(--m-b-1-5);
+    margin-right: var(--m-b-1-5);
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* ======================================= ALTURA DO CABEÇALHO =======================================*/
+.cabeçalho {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--cor-body);
+}
+
+
+/* ======================================= NAVBAR ESTILIZAÇÃO =======================================*/
+.navbar {
+    max-width: 968px;
+    height: var(--header-altura);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo,
+.navbar-toggle {
+    color: var(--cor-titulo);
+    font-weight: var(--font-semi-media);
+}
+
+.navbar-logo:hover {
+    color: var(--primeira-cor);
+}
+
+.navbar-toggle {
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.navbar-toggle:hover {
+    color: var(--primeira-cor);
+}
+
+/* ======================================= MEDIA QUERIES NAVBAR =======================================*/
+
+
+@media screen and (max-width: 767px) {
+    .navbar-menu {
+        position: fixed;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--cor-body);
+        padding: 2rem 1.5rem 4rem;
+        box-shadow: 0 -1px 4px rgba(0,0,0,.15);
+        border-radius: 1.5rem 1.5rem 0 0;
+        transition: .3s;
+    }
+}
+
+
+.theme-button {
+    align-self: flex-end;
+}
+
+.navbar-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.navbar-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--pequena-fontsize);
+    color: var(--cor-titulo);
+    font-weight: var(--font-media);
+}
+
+.navbar-link:hover {
+    color: var(--primeira-cor);
+
+}
+
+.navbar-icon {
+    font-size: 1.2rem;
+}
+
+.navbar-close {
+    position: absolute;
+    right: 1.3rem;
+    bottom: .5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primeira-cor);
+}
+
+.navbar-close:hover {
+   color: var(--primeira-cor-alternativa);
+}
+
+.show-menu {
+    bottom: 0;
+}
+
+/* ======================================= HOME ESTILIZAÇÃO =======================================*/
+
+.home-container {
+    gap: 1rem;
+}
+
+.home-content {
+    grid-template-columns: .5fr 3fr;
+    padding-top: 3.5rem;
+    align-items: center;
+}
+
+.home-social {
+    display: grid;
+    grid-template-columns: max-content;
+    row-gap: 1rem;
+}
+
+.home-social-icon {
+    font-size: 1.25rem;
+    color: var(--primeira-cor);
+}
+
+.home-social-icon:hover {
+    color: var(--primeira-cor-alternativa);
+}
+
+.home-blob {
+    width: 200px;
+    fill: var(--primeira-cor);
+}
+
+.home-blob-img {
+    width: 190px;
+}
+
+.home-data {
+    grid-column: 1/3;
+}
+
+.home-titulo {
+    font-size: var(--grande-fontsize);
+}
+
+.home-subtitulo {
+    font-size: var(--h3-fontsize);
+    color: var(--cor-texto);
+    font-weight: var(--font-media);
+    margin-bottom: var(--m-b-0-75);
+}
+
+.home-descricao {
+    margin-bottom: var(--m-b-2);
+}
+
+.home-scroll-button {
+    color: var(--primeira-cor);
+    transition: .3s;
+}
+
+.home-scroll-button:hover {
+    transform: translateY(.25rem);
+    color: var(--primeira-cor-alternativa);
+}
+
+.home-scroll-mouse {
+    font-size: 2rem;
+}
+
+.home-scroll-name {
+    font-size: var(--pequena-fontsize);
+    color: var(--cor-titulo);
+    font-weight: var(--font-media);
+    margin-right: var(--m-b-0-2);
+}
+
+.home-scroll-arrow {
+    font-size: 1.25rem;
+}
+
+/* ======================================= BUTTONS ESTILIZAÇÃO =======================================*/
+
+.button {
+    display: inline-block;
+    background-color: var(--primeira-cor);
+    color: white;
+    padding: 1rem;
+    border-radius: .5rem;
+    font-weight: var(--font-media);
+}
+
+.button:hover {
+    background-color: var(--primeira-cor-alternativa);
+}
+
+.button-icon {
+    font-size: 1rem;
+    margin-left: var(--m-b-0-5);
+    transition: .3s;
+}
+
+.button-flex {
+    display: inline-flex;
+    align-items: center;
+}
+
+.button-small {
+    padding: .75rem 1rem;
+}
+
+.button-link {
+    padding: 0;
+    background-color: transparent;
+    color: var(--primeira-cor-alternativa);
+}
+
+.button-link:hover {
+    background-color: transparent;
+}
+
+/* ======================================= SOBRE ESTILIZAÇÃO =======================================*/
+
+.sobre-container {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0 2rem;
+}
+
+.sobre-img {
+    width: 250px;
+    border-radius: .5rem;
+    justify-self: center;
+    align-self: center;
+}
+
+.sobre-descricao {
+    text-align: justify;
+    margin-bottom: var(--m-b-2-5);
+}
+
+.sobre-info {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: var(--m-b-2-5);
+}
+
+.sobre-info-titulo {
+    font-size: var(--h2-fontsize);
+    font-weight: var(--font-semi-media);
+    color: var(--primeira-cor);
+}
+
+.sobre-info-nome {
+    font-size: var(--pequena-fontsize);
+}
+
+.sobre-info-titulo,
+.sobre-info-nome {
+    display: block;
+    text-align: center;
+
+}
+
+.sobre-botoes {
+    display: flex;
+    justify-content: center;
+}
+
+/* ======================================= HABILIDADES ESTILIZAÇÃO =======================================*/
+
+.skills-container {
+    row-gap: 0;
+}
+
+.skill-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--m-b-2-5);
+    cursor: pointer;
+}
+
+.skills-arrow,
+.skills-icon {
+    font-size: 2rem;
+    color: var(--primeira-cor);
+}
+
+.skills-icon {
+    margin-right: var(--m-b-0-75);
+}
+
+.skills-titulo {
+    font-size: var(--h3-fontsize);
+}
+
+.skills-subtitulo {
+    font-size: var(--pequena-fontsize);
+    color: var(--cor-texto-brilho);
+
+}
+
+.skills-arrow {
+    margin-left: auto;
+    transition: .4s;
+}
+
+.skills-titulo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills-nome {
+    font-size: var(--normal-fontsize);
+    font-weight: var(--font-media);
+}
+
+.skills-bar,
+.skills-percentage {
+    height: 6px;
+    border-radius: .25rem;
+}
+
+.skills-bar {
+    background-color: var(--primeira-cor-brilho);
+}
+
+.skills-percentage {
+    display: block;
+    background-color: var(--primeira-cor);
+}
+
+.skills-html {
+    width: 90%;
+}
+
+.skills-css {
+    width: 90%;
+}
+
+.skills-js {
+    width: 75%;
+}
+
+.skills-react {
+    width: 50%;
+}
+
+.skills-node {
+    width: 70%;
+}
+
+.skills-express {
+    width: 50%;
+}
+
+.skills-sql {
+    width: 70%;
+}
+
+.skills-database {
+    width: 80%;
+}
+
+.skills-figma {
+    width: 60%;
+}
+
+.skills-photoshop {
+    width: 100%;
+}
+
+.skills-canvas {
+    width: 70%;
+}
+
+.skills-motion {
+    width: 20%;
+}
+
+.skills-data {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    margin-bottom: 1.5rem;
+}
+
+.skills-list {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .7s ease, margin-bottom .7s ease; /* Adiciona uma transição suave */
+
+}
+
+.skills-close .skills-list {
+    margin-bottom: 0;
+}
+
+.skills-open .skills-list {
+    max-height: 500px;
+    margin-bottom: var(--m-b-0-5);
+}
+
+.skills-open .skills-arrow {
+    transform: rotate(-180deg);
+}
+
+.skills-arrow {
+    transition: transform .5s ease; /* Suaviza a rotação da seta */
+}
+
+/* ======================================= QUALIFICAÇÕES ESTILIZAÇÃO =======================================*/
+
+.qualification-tabs {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: var(--m-b-2);
+}
+
+.qualification-button {
+    font-size: var(--h3-fontsize);
+    font-weight: var(--font-media);
+    cursor: pointer;
+}
+
+.qualification-button:hover {
+    color: var(--primeira-cor);
+}
+
+.qualification-icon {
+    font-size: 1.8rem;
+    margin-right: var(--m-b-0-25);
+}
+
+.qualification-data {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    column-gap: 1.5rem;
+}
+
+.qualification-titulo {
+    font-size: var(--normal-fontsize);
+    font-weight: var(--font-media);
+}
+
+.qualification-subtitulo {
+    display: inline-block;
+    font-size: var(--pequena-fontsize);
+    margin-bottom: var(--m-b-1);
+}
+
+.qualification-calendar {
+    font-size: var(--pequena-fontsize);
+    color: var(--cor-texto-brilho);
+}
+
+.qualification-rounder {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-color: var(--primeira-cor);
+    border-radius: 50%;
+}
+
+.qualification-line {
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: var(--primeira-cor);
+    transform: translate(6px, -7px);
+}
+
+.qualification [data-content] {
+    display: none;
+}
+
+.qualification-active[data-content] {
+    display: block;
+}
+
+.qualification-button.qualification-active {
+    color: var(--primeira-cor);
+}
+
+/* ======================================= SERVIÇOS ESTILIZAÇÃO =======================================*/
+.services-container {
+   gap: 1.5rem; 
+   grid-template-columns: repeat(2,1fr);
+}
+
+
+.services-content {
+    position: relative;
+    background-color: var(--cor-container);
+    padding: 3.5rem .5rem 1.25rem 1.5rem;
+    border-radius: .25rem;
+    box-shadow: 0 2px 4px rgba(0,0,0, .15);
+    transition: .3s ease;
+}
+
+
+.services-content:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0, .15);
+}
+
+.services-icon {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--primeira-cor);
+    margin-bottom: var(--m-b-1);
+}
+
+.services-titulo {
+    font-size: var(--h3-fontsize);
+    margin-bottom: var(--m-b-1);
+    font-weight: var(--font-media);
+}
+
+.services-button {
+    cursor: pointer;
+    font-size: var(--pequena-fontsize);
+}
+
+.services-button:hover .button-icon {
+    transform: translateX(.25rem);
+}
+
+.services-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0, .3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    z-index: var(--z-modal);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+.services-modal-content {
+    position: relative;
+    background-color: var(--cor-container);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.services-content-services {
+    row-gap: 1rem;
+}
+
+.services-modal-service {
+    display: flex;
+   
+}
+
+.services-modal-titulo {
+    font-size: var(--h3-fontsize);
+    font-weight: var(--font-media);
+    margin-bottom: var(--m-b-1-5);
+}
+
+.services-modal-close {
+    position: absolute;
+    top: .125rem;
+    right: .2rem;
+    font-size: 1.2rem;
+    color: var(--primeira-cor);
+    cursor: pointer;
+}
+
+.services-modal-icon {
+    color: var(--primeira-cor);
+    margin-right: var(--m-b-0-25);
+}
+
+.active-modal {
+    opacity: 1;
+    visibility: visible;
+}
+
+.portfolio-container {
+    overflow: initial;
+    display: grid;
+}
+
+
+/* ======================================= PROJETOS/PORTFOLIO ESTILIZAÇÃO =======================================*/
+
+.portfolio-content {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column; /* Para alinhar os itens verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente (se necessário) */
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+.portfolio-img {
+    width: 300px;
+    border-radius: .5rem;
+    justify-self: center;
+}
+
+.portfolio-titulo {
+    font-size: var(--h3-fontsize);
+    margin-bottom: var(--m-b-0-5);
+}
+
+.portfolio-description {
+    margin-bottom: var(--m-b-0-75);
+    text-align: justify;
+}
+
+.portfolio-button:hover .button-icon {
+    transform: translateX(var(--m-b-0-25));
+}
+
+.swiper-button-prev {
+    padding-left: 2.2rem;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    visibility: hidden;
+}
+
+.swiper-portfolio-icon {
+    font-size: 2rem;
+    color: var(--primeira-cor);
+}
+
+
+/* ======================================= FOOTER ESTILIZAÇÃO =======================================*/
+
+.footer {
+    padding-top: 2rem;
+
+}
+
+.footer-container {
+    row-gap: 3.5rem;
+}
+
+.footer-bg {
+    background-color: var(--primeira-cor-secundaria);
+    padding: 2rem 0 3rem;
+}
+
+.footer-titulo {
+    font-size: var(--h1-fontsize);
+    margin-bottom: var(--m-b-0-25);
+}
+
+.footer-subtitulo {
+    font-size: var(--pequena-fontsize);
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+.footer-link:hover {
+    color: var(--primeira-cor-brilho);
+}
+
+.footer-social {
+    font-size: 1.25rem;
+    margin-right: var(--m-b-1-5);
+
+}
+
+.footer-social:hover {
+    color: var(--primeira-cor-brilho);
+}
+
+.footer-copy {
+    font-size: var(--pequena-fontsize);
+    text-align: center;
+    color: var(--primeira-cor-brilho);
+    margin-top: var(--m-b-3);
+}
+
+.footer-titulo,
+.footer-subtitulo,
+.footer-link,
+.footer-social {
+    color: #FFF;
+}
+
+
+/* ======================================= MEDIA QUERIES MOBILE #1 =======================================*/
+
+@media screen and (max-width: 350px) {
+    .container {
+        margin-left: var(--m-b-1);
+        margin-right: var(--m-b-1);
+    }
+
+    .navbar-menu {
+        padding: 2rem .25rem 4rem;
+    }
+
+    .navbar-list {
+        column-gap: 0;
+    }
+
+    .home-content {
+        grid-template-columns: .25fr 3fr;
+    }
+
+    .home-blob {
+        width: 180px;
+    }
+
+    .sobre-img {
+        width: 190px;
+    }
+
+    .skills-titulo {
+        font-size: var(--normal-fontsize);
+    }
+
+    .qualification-button {
+        font-size: var(--normal-fontsize);
+    }
+
+
+    .qualification-data {
+        gap: .5rem;
+    }
+
+    .qualification-icon {
+        font-size: 1.2rem;
+    }
+
+    .qualification-titulo {
+        font-size: .700rem;
+    }
+
+    .services > .section-subtitulo {
+        margin: 0 2rem 2rem;
+    }
+
+    .services-container {
+        grid-template-columns: max-content;
+        justify-content: center;
+    }
+
+    .services-content {
+        padding: 3.5rem;
+    }
+
+    .swiper-portfolio-icon {
+        margin-bottom: 21rem;
+
+    }
+
+    .portfolio-img {
+        width: 180px;
+    }
+}
+
+/* ======================================= MEDIA QUERIES MOBILE #2 =======================================*/
+
+@media screen and (min-width: 568px) {
+    .home-content {
+        grid-template-columns: max-content 1fr 1fr;
+    }
+
+    .home-data {
+        grid-column: initial;
+    }
+
+    .home-img {
+        order: 1;
+        justify-content: center;
+        position: relative;
+        top: -50px;
+
+    }
+
+    .home-scroll {
+        display: flex;
+        justify-content: end;
+        position: relative;
+        top: -70px;
+        right: 35px;
+        /*visibility: hidden;*/
+    }
+
+    .home-descricao {
+        position: relative; /* Necessário para manipulações precisas */
+        color: transparent;
+    }
+
+    .home-descricao::before{
+        content: 'Desenvolvedor em constante evolução, com experiência em tecnologias modernas de Back-end e Front-end, conhecimento em metodologias ágeis, redes e cibersegurança';
+        color: var(--cor-texto);
+        font-size: var();
+        position: absolute;
+    }
+
+    .home-titulo {
+        font-size: var(--h1-fontsize);
+    }
+
+    .home-social {
+        position: relative;
+        top: -50px;
+    }
+
+    .section {
+        padding: 1rem 0 3.5rem;
+    }
+
+    .sobre-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sobre-descricao {
+        font-size: .8rem;
+    }
+
+    .qualification-sections {
+        display: grid;
+        grid-template-columns: .6fr;
+        justify-content: center;
+    }
+
+    .services-modal-content {
+        width: 400px; 
+    }
+
+    .portfolio-img {
+        width: 390px;
+    }
+
+    .skills > .section-titulo {
+        padding-top: 4rem;
+    }
+
+    .services > .section-titulo {
+        padding-top: 4rem;
+    }
+
+    .portfolio > .section-titulo {
+        padding-top: 4rem;
+    }
+
+}
+
+/* ======================================= MEDIA QUERIES MOBILE #2 =======================================*/
+
+@media screen and (min-width: 768px) {
+    
+    .home-titulo {
+        font-size: var(--grande-fontsize);
+    }
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    .section {
+        padding: 6rem 0 2rem;
+    }
+
+    .section-subtitulo {
+        margin-bottom: 4rem;
+    }      
+    
+    
+    .cabeçalho{
+        top: 0;
+        bottom: initial;       
+    }
+
+    .cabeçalho,
+    .main,
+    .footer-container {
+        padding: 0 1rem;
+    }
+
+    .navbar {
+        height: calc(var(--header-altura) + 1.5rem);
+        column-gap: 1rem;
+    }
+
+    .navbar-icon,
+    .navbar-close,
+    .navbar-toggle {
+        display: none;
+    }
+
+    .navbar-list {
+        display: flex;
+        column-gap: 2rem;
+    }
+
+    .navbar-menu {
+        margin-left: auto;
+    }
+    
+    .change-theme {
+        margin: 0;
+    }
+
+    .home-container {
+        row-gap: 5rem;
+    }
+
+    .home-content {
+        padding-top: 5.5rem;
+        column-gap: 2rem;
+    }
+
+    .main > .home {
+        padding-left: 2rem;
+    }
+
+    .home-blob {
+        width: 270px;
+    }
+
+    .home-descricao {
+        position: static; /* Volta ao padrão ou redefine conforme necessário */
+        color: unset; /* Torna a cor visível novamente, se desejado */
+    }
+
+    .home-descricao::before {
+        content: ''; /* Remove o texto do pseudoelemento */
+        color: unset; /* Reseta a cor */
+        font-size: unset; /* Reseta o tamanho da fonte */
+        position: static; /* Volta ao comportamento padrão */
+    }
+
+    .home-scroll {
+        display: block;
+    }
+
+    .home-scroll-button {
+        margin-left: 5rem;
+    }
+
+    .sobre-img {
+        width: 274px;
+    }
+    .sobre-container {
+        column-gap: 5rem;
+        margin-right: 10rem;
+    }
+
+    .sobre-descricao {
+        text-align: initial;
+        font-size: var(--media-fontsize);
+    }
+
+    .sobre-info {
+        justify-content: space-between;
+    }
+
+    .sobre-botoes {
+        justify-content: initial;
+    }
+
+    .sobre-container{
+        margin: 0;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+    }
+    .sobre-descricao {
+        text-align: justify;
+    }
+
+    .home-descricao {
+        text-align: justify;
+    }
+
+    .skills-container {
+        max-width: 500px;
+    }
+
+    .qualification-tabs {
+        justify-content: center;
+    }
+
+    .qualification-button {
+        margin: var(--m-b-1);
+    }
+
+    .qualification-sections {
+        grid-template-columns: .5fr;
+    }
+
+    .services-container {
+        grid-template-columns: repeat(2, 320px);
+        justify-content: center;
+    }
+
+    .services-icon {
+        font-size: 2rem;
+    }
+    .services-content {
+        padding: 6rem 0 2rem 2.5rem;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .footer-bg {
+        padding: 3rem 0 3.5rem;
+    }
+
+    .footer-links {
+        flex-direction: row;
+        column-gap: 2rem;
+    }
+
+    .footer-socials {
+        justify-self: flex-end
+    }
+
+    .footer-copy {
+        margin-top: 4.5rem;
+    }
+
+    .swiper-slide {
+        display: grid !important; 
+    }
+   
+   
+    .portfolio-container,
+    .portfolio-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portfolio-titulo {
+        text-align: left;
+    }
+
+    .swiper-portfolio-icon {
+        margin: 0 40px 0 0;
+    }
+
+    .swiper-button-prev {
+        padding-left: 2rem;
+    }
+
+    .swiper-button-next {
+        margin-right: -2.8rem;
+    }
+}
+
+/* ======================================= MEDIA QUERIES DESKTOP #1 =======================================*/
+
+
+@media screen and (min-width: 1024px) {
+    .cabeçalho,
+    .main,
+    .footer-container {
+        padding: 0;
+    }
+
+    .home-blob {
+        width: 320px;
+    }
+
+    .home-social {
+        transform: translate(-6rem);
+    }
+
+    .sobre {
+        display: grid;
+        grid-template-columns: .6fr;
+        justify-content: center;
+    }
+
+    .swiper-portfolio-icon {
+        font-size: 2rem;
+    }
+
+
+}
+
+/* ======================================= MEDIA QUERIES DESKTOP #2 =======================================*/
+
+@media screen and (min-width: 1224px) {
+    .sobre-container {
+        margin: 0 0 0 11rem;
+    }
+
+    .sobre {
+        display: grid;
+        grid-template-columns: .6fr;
+        justify-content: center;
+    }
+
+    .home-scroll {
+        top: 10px;
+    }
+
+}
+
+/* ======================================= MEDIA QUERIES DESKTOP #3 =======================================*/
+
+
+@media screen and (min-width: 1224px) {
+    .sobre-container {
+        margin: 0 0 0 0rem;
+    }
+
+    .sobre {
+        display: grid;
+        grid-template-columns: .6fr;
+        justify-content: center;
+    }
+
+    .home-scroll {
+        top: 10px;
+    }
+
+}
+
+/* ======================================= MEDIA QUERIES DESKTOP #4 =======================================*/
+
+
+@media screen and (min-width: 1600px) {
+    .sobre-container {
+        margin: 0 0 0 5rem;
+    }
+
+    .sobre {
+        display: grid;
+        grid-template-columns: .6fr;
+        justify-content: center;
+    }
+
+    .home-scroll {
+        top: 10px;
+    }
+
+}
+ /* ======================================= MEDIA QUERIES DESKTOP #5 =======================================*/
+
+@media screen and (min-width: 1750px) {
+    .sobre-container {
+        margin: 0 0 0 8rem;
+    }
+
+    .sobre {
+        display: grid;
+        grid-template-columns: .6fr;
+        justify-content: center;
+    }
+
+    .home-scroll {
+        top: 10px;
+    }
+
+}
+
+.footer-titulo {
+    position: relative;
+    top: -14px;
+}
+
+.footer-subtitulo {
+    position: relative;
+    top: -19px;
+}

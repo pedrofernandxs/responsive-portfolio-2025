@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css"> 
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+ 
+    <title>Meu portfolio</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="cabeçalho" id="cabeçalho">
+        <nav class="navbar container">
+            <a href="#" class="navbar-logo">Pedro</a>
+
+            <div class="navbar-menu" id="navbar-menu">
+                <ul class="navbar-list grid">
+                    <li class="navbar-item">
+                        <a href="#home" class="navbar-link">
+                            <i class="uil uil-estate navbar-icon"></i> Home
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#sobre" class="navbar-link">
+                            <i class="uil uil-user navbar-icon"></i> Sobre
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#habilidades" class="navbar-link">
+                            <i class="uil uil-file-info-alt navbar-icon"></i> Habilidades
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#qualificações" class="navbar-link">
+                            <i class="uil uil-briefcase-alt navbar-icon"></i> Qualificações
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#serviços" class="navbar-link">
+                            <i class="uil uil-scenery navbar-icon"></i> Serviços
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#projetos" class="navbar-link">
+                            <i class="uil uil-message navbar-icon"></i> Projetos
+                        </a>
+                    </li>
+                </ul>
+                <i class="uil uil-times navbar-close navbar-icon" id="navbar-close"></i>
+            </div>
+
+            <div class="navbar-btns">
+                <!-- Dark Theme-->
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
+                
+                
+                <div class="navbar-toggle" id="navbar-toggle">
+                    <i class="uil uil-apps"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HOME -->
+    <main class="main">
+        <section class="home section" id="home">
+            <div class="home-container container grid">
+                <div class="home-content grid">
+                    <div class="home-social">
+                        <a href="https://www.linkedin.com/in/pedrofernandxs/" target="_blank" class="home-social-icon">
+                            <i class="uil uil-linkedin"></i>
+                        </a>
+
+                        <a href="https://www.behance.net/pedrxxt" target="_blank" class="home-social-icon">
+                            <i class="uil uil-behance"></i>
+                        </a>
+
+                        <a href="https://github.com/Pedrofernandxs" target="_blank" class="home-social-icon">
+                            <i class="uil uil-github"></i>
+                        </a>
+                    </div>
+                    <div class="home-img">
+                        <svg class="home-blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <mask id="mask0" mask-type="alpha">
+                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                            130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                            97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                            0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
+                            </mask>
+                            <g mask="url(#mask0)">
+                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                            165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                            129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                            -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
+
+                                <image class="home-blob-img" x='8' y="" xlink:href="img/perfil.png" />
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div class="home-data">
+                        <h1 class="home-titulo">Pedro Fernandes</h1>
+                        <h3 class="home-subtitulo">Programador Full Stack</h3>
+                        <p class="home-descricao">Desenvolvedor em constante evolução, com experiência em tecnologias
+                            modernas de Back-end e Front-end, conhecimento em metodologias ágeis, redes e
+                            cibersegurança. Foco em criar soluções digitais eficientes e seguras.</p>
+                        <a href="https://www.linkedin.com/in/pedrofernandxs/" target="_blank" class="button button-flex">
+                            Fale Comigo<i class="uil uil-message button-icon"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="home-scroll">
+                    <a href="#sobre" class="home-scroll-button button-flex">
+                        <i class="uil uil-mouse-alt home-scroll-mouse"></i>
+                        <span class="home-scroll-name">Scroll Down</span>
+                        <i class="uil uil-arrow-down home-scroll-arrow"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- SOBRE -->
+    <section class="sobre section" id="sobre">
+        <h2 class="section-titulo">Sobre</h2>
+        <span class="section-subtitulo">Minha Introdução</span>
+
+        <div class="sobre-container container grid">
+            <img src="img/trabalho.png" alt="" class="sobre-img">
+
+            <div class="sobre-data">
+                <p class="sobre-descricao">Sou um profissional em crescimento com experiência em desenvolvimento Front-End e Back-End, Designer, e metodologias ágeis. Tenho foco em criar soluções eficientes, seguras e visualmente impactantes, com atenção à cibersegurança e redes.</p>
+
+                <div class="sobre-info">
+                    <div>
+                        <span class="sobre-info-titulo">01+</span>
+                        <span class="sobre-info-nome">Anos de <br> experiência</span>
+                    </div>
+
+                    <div>
+                        <span class="sobre-info-titulo">05+</span>
+                        <span class="sobre-info-nome">Projetos <br> realizados</span>
+                    </div>
+
+                    <div>
+                        <span class="sobre-info-titulo">02+</span>
+                        <span class="sobre-info-nome">Empresas <br> trabalhadas</span>
+                    </div>
+                </div>
+
+                <div class="sobre-botoes">
+                    <a download="" href="pedrofernandxs.pdf" class="button button-flex">
+                        Download CV<i class="uil uil-import button-icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section class="skills section" id="habilidades">
+        <h2 class="section-titulo">Habilidades</h2>
+        <span class="section-subtitulo">Minhas habilidades e tecnologias</span>
+
+        <div class="skills-container container grid">
+            <div>
+                <!-- FRONT END SKILLS-->
+                <div class="skills-conteudo skills-close">
+                    <div class="skill-header">
+                        <i class="uil uil-brackets-curly skills-icon"></i>
+
+                        <div>
+                            <h1 class="skills-titulo">Desenvolvimento Front-End</h1>
+                            <span class="skills-subtitulo">Nível de domínio</span>
+                        </div>
+
+                        <i class="uil uil-angle-down skills-arrow"></i>
+                    </div>
+
+                    <div class="skills-list grid">
+                        <div class="skills-data">
+                            <div class="skills-titulo">
+                                <h3 class="skills-nome">HTML</h3>
+                                <span class="skills-number">90%</span>
+                            </div>
+                            <div class="skills-bar">
+                                <span class="skills-percentage skills-html"></span>
+                            </div>
+
+                            <div class="skills-data">
+                                <div class="skills-titulo">
+                                    <h3 class="skills-nome">CSS</h3>
+                                    <span class="skills-number">90%</span>
+                                </div>
+                                <div class="skills-bar">
+                                    <span class="skills-percentage skills-css"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills-data">
+                                <div class="skills-titulo">
+                                    <h3 class="skills-nome">JavaScript</h3>
+                                    <span class="skills-number">75%</span>
+                                </div>
+                                <div class="skills-bar">
+                                    <span class="skills-percentage skills-js"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills-data">
+                                <div class="skills-titulo">
+                                    <h3 class="skills-nome">React</h3>
+                                    <span class="skills-number">50%</span>
+                                </div>
+                                <div class="skills-bar">
+                                    <span class="skills-percentage skills-react"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- BACK END SKILLS-->
+                <div class="skills-conteudo skills-close">
+                    <div class="skill-header skill-header-back-desig">
+                        <i class="uil uil-server-alt skills-icon"></i>
+
+                        <div>
+                            <h1 class="skills-titulo">Desenvolvimento Back-End</h1>
+                            <span class="skills-subtitulo">Nível de domínio</span>
+                        </div>
+
+                        <i class="uil uil-angle-down skills-arrow"></i>
+                    </div>
+
+                    <div class="skills-list grid">
+                        <div class="skills-data">
+                            <div class="skills-titulo">
+                                <h3 class="skills-nome">Node JS</h3>
+                                <span class="skills-number">70%</span>
+                            </div>
+                            <div class="skills-bar">
+                                <span class="skills-percentage skills-node"></span>
+                            </div>
+
+                            <div class="skills-data">
+                                <div class="skills-titulo">
+                                    <h3 class="skills-nome">Express</h3>
+                                    <span class="skills-number">50%</span>
+                                </div>
+                                <div class="skills-bar">
+                                    <span class="skills-percentage skills-express"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills-data">
+                                <div class="skills-titulo">
+                                    <h3 class="skills-nome">SQL Server</h3>
+                                    <span class="skills-number">70%</span>
+                                </div>
+                                <div class="skills-bar">
+                                    <span class="skills-percentage skills-sql"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills-data">
+                                <div class="skills-titulo">
+                                    <h3 class="skills-nome">Postman/Insomnia</h3>
+                                    <span class="skills-number">85%</span>
+                                </div>
+                                <div class="skills-bar">
+                                    <span class="skills-percentage skills-database"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <!-- DESGINER SKILLS-->
+                <div class="skills-conteudo skills-close">
+                    <div class="skill-header skill-header-back-desig">
+                        <i class="uil uil-swatchbook skills-icon"></i>
+
+                        <div>
+                            <h1 class="skills-titulo">Habilidades em Design</h1>
+                            <span class="skills-subtitulo">Nível de domínio</span>
+                        </div>
+
+                        <i class="uil uil-angle-down skills-arrow"></i>
+                    </div>
+
+                    <div class="skills-list grid">
+                        <div class="skills-data">
+                            <div class="skills-titulo">
+                                <h3 class="skills-nome">Figma</h3>
+                                <span class="skills-number">60%</span>
+                            </div>
+                            <div class="skills-bar">
+                                <span class="skills-percentage skills-figma"></span>
+                            </div>
+
+                            <div class="skills-data">
+                                <div class="skills-titulo">
+                                    <h3 class="skills-nome">Photoshop</h3>
+                                    <span class="skills-number">100%</span>
+                                </div>
+                                <div class="skills-bar">
+                                    <span class="skills-percentage skills-photoshop"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills-data">
+                                <div class="skills-titulo">
+                                    <h3 class="skills-nome">Canva</h3>
+                                    <span class="skills-number">70%</span>
+                                </div>
+                                <div class="skills-bar">
+                                    <span class="skills-percentage skills-canvas"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills-data">
+                                <div class="skills-titulo">
+                                    <h3 class="skills-nome">After Effects</h3>
+                                    <span class="skills-number">30%</span>
+                                </div>
+                                <div class="skills-bar">
+                                    <span class="skills-percentage skills-motion"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUALIFICAÇÕES -->
+    <section class="qualification section" id="qualificações">
+        <h2 class="section-titulo">Qualificações</h2>
+        <span class="section-subtitulo">Formação acadêmica e experiências</span>
+
+        <div class="qaulification-container container">
+            <div class="qualification-tabs">
+                <div class="qualification-button button-flex qualification-active" data-target="#education">
+                    <i class="uil uil-graduation-cap qualification-icon"></i>
+                    Educação
+                </div>
+
+                <div class="qualification-button button-flex" data-target="#work">
+                    <i class="uil uil-briefcase-alt qualification-icon"></i></i>
+                    Experiência
+                </div>
+            </div>
+
+            <div class="qualification-sections">
+                <!--   QUALIDADES CONTENT 01  -->
+                <div class="qualification-content qualification-active" data-content id="education">
+                    <!--   QUALIDADES  01  -->
+                    <div class="qualification-data">
+                        <div>
+                            <h3 class="qualification-titulo">Análise e Desenvolvimento de Sistemas</h3>
+                            <span class="qualification-subtitulo">Graduação - Unidesc</span>
+                            <div class="qualification-calendar">
+                                <i class="uil uil-calendar-alt"></i>
+                                2021 - 2024
+                            </div>
+                        </div>
+
+                        <div>
+                            <span class="qualification-rounder"></span>
+                            <span class="qualification-line"></span>
+                        </div>
+                    </div>
+
+                    <!--   QUALIDADES  02  -->
+                    <div class="qualification-data">
+                        <div></div>
+
+                        <div>
+                            <span class="qualification-rounder"></span>
+                            <span class="qualification-line"></span>
+                        </div>
+
+                        <div>
+                            <h3 class="qualification-titulo">Introduction to Cybersecurity License</h3>
+                            <span class="qualification-subtitulo">Certiticação - Cisco</span>
+                            <div class="qualification-calendar">
+                                <i class="uil uil-calendar-alt"></i>
+                                2025 - 2025
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--   QUALIDADES  03  -->
+                    <div class="qualification-data">
+                        <div>
+                            <h3 class="qualification-titulo">Desenvolvimento de Aplicações Mobile</h3>
+                            <span class="qualification-subtitulo">Pós-Graduação - Estácio</span>
+                            <div class="qualification-calendar">
+                                <i class="uil uil-calendar-alt"></i>
+                                2025 - 2026
+                            </div>
+                        </div>
+
+                        <div>
+                            <span class="qualification-rounder"></span>
+                            <span class="qualification-line"></span>
+                        </div>
+                    </div>
+
+                    <!--   QUALIDADES  04  -->
+                    <div class="qualification-data">
+                        <div></div>
+
+                        <div>
+                            <span class="qualification-rounder"></span>
+                            <!-- <span class="qualification-line"></span>  -->
+                        </div>
+
+                        <div>
+                            <h3 class="qualification-titulo">Cybersecurity Awareness - CAPC !</h3>
+                            <span class="qualification-subtitulo">Certificação - Certiprof</span>
+                            <div class="qualification-calendar">
+                                <i class="uil uil-calendar-alt"></i>
+                                2024 - 2024
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--   QUALIDADES CONTENT 02  -->
+                <div class="qualification-content " data-content id="work">
+                    <!--   QUALIDADES  01  -->
+                    <div class="qualification-data">
+                        <div>
+                            <h3 class="qualification-titulo">Designer Gráfico</h3>
+                            <span class="qualification-subtitulo">Freelancer</span>
+                            <div class="qualification-calendar">
+                                <i class="uil uil-calendar-alt"></i>
+                                2022 - 2024
+                            </div>
+                        </div>
+
+                        <div>
+                            <span class="qualification-rounder"></span>
+                            <span class="qualification-line"></span>
+                        </div>
+                    </div>
+
+                    <!--   QUALIDADES  02  -->
+                    <div class="qualification-data">
+                        <div></div>
+
+                        <div>
+                            <span class="qualification-rounder"></span>
+                            <span class="qualification-line"></span>
+                        </div>
+
+                        <div>
+                            <h3 class="qualification-titulo">Suporte Técnico</h3>
+                            <span class="qualification-subtitulo">Onitel Telecom</span>
+                            <div class="qualification-calendar">
+                                <i class="uil uil-calendar-alt"></i>
+                                2023 - 2025
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--   QUALIDADES  03  -->
+                    <div class="qualification-data">
+                        <div>
+                            <h3 class="qualification-titulo">Social Media</h3>
+                            <span class="qualification-subtitulo">Eleições 2024</span>
+                            <div class="qualification-calendar">
+                                <i class="uil uil-calendar-alt"></i>
+                                2024 - 2024
+                            </div>
+                        </div>
+
+                        <div>
+                            <span class="qualification-rounder"></span>
+                            <span class="qualification-line"></span>
+                        </div>
+
+
+                    </div>
+                    <!--   QUALIDADES  02  -->
+                    <div class="qualification-data">
+                        <div></div>
+
+                        <div>
+                            <span class="qualification-rounder"></span>
+                            <!--<span class="qualification-line"></span>-->
+                        </div>
+
+                        <div>
+                            <h3 class="qualification-titulo">Desenvolvedor Frontend</h3>
+                            <span class="qualification-subtitulo">Gbarbosa | Perini </span>
+                            <div class="qualification-calendar">
+                                <i class="uil uil-calendar-alt"></i>
+                                2023 - 2024
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="services section" id="serviços">
+        <h2 class="section-titulo">Serviços</h2>
+        <span class="section-subtitulo">Minhas criações e ferramentas de domínio</span>
+
+        <div class="services-container container grid">
+            <!--<SERVICES 01></span>-->
+            <div class="services-content">
+                <div>
+                    <i class="uil uil-web-grid services-icon"></i>
+                    <h3 class="services-titulo">Social <br> Media #1</h3>
+                </div>
+
+                <span class="button button-flex button-small button-link services-button">
+                    View More
+                    <i class="uil uil-arrow-right button-icon"></i>
+                </span>
+
+                <div class="services-modal">
+                    <div class="services-modal-content">
+                        <img src="img/acai.png" alt="">
+                        <i class="uil uil-times services-modal-close"></i>
+
+                    </div>
+                </div>
+            </div>
+            <!--<SERVICES 02></span>-->
+            <div class="services-content">
+                <div>
+                    <i class="uil uil-web-grid services-icon"></i>
+                    <h3 class="services-titulo">Social <br> Media #2</h3>
+                </div>
+
+                <span class="button button-flex button-small button-link services-button">
+                    View More
+                    <i class="uil uil-arrow-right button-icon"></i>
+                </span>
+
+                <div class="services-modal">
+                    <div class="services-modal-content">
+                        <img src="img/bahma.png" alt="">
+                        <i class="uil uil-times services-modal-close"></i>
+
+                    </div>
+                </div>
+            </div>
+            <!--<SERVICES 03></span>-->
+            <div class="services-content">
+                <div>
+                    <i class="uil uil-pen services-icon"></i>
+                    <h3 class="services-titulo">Front-End <br> Dev</h3>
+                </div>
+
+                <span class="button button-flex button-small button-link services-button">
+                    View More
+                    <i class="uil uil-arrow-right button-icon"></i>
+                </span>
+
+                <div class="services-modal">
+                    <div class="services-modal-content">
+                        <h4 class="services-modal-titulo">Front-End <br> Dev</h4>
+                        <i class="uil uil-times services-modal-close"></i>
+
+                        <ul class="services-modal-services grid">
+                            <li class="services-modal-service">
+                                <i class="uil uil-check-circle services-modal-icon"></i>
+                                <p>JavaScript</p>
+                            </li>
+
+                            <li class="services-modal-service">
+                                <i class="uil uil-check-circle services-modal-icon"></i>
+                                <p>React</p>
+                            </li>
+
+                            <li class="services-modal-service">
+                                <i class="uil uil-check-circle services-modal-icon"></i>
+                                <p> HTML5 | CSS3</p>
+                            </li>
+
+                            <li class="services-modal-service">
+                                <i class="uil uil-check-circle services-modal-icon"></i>
+                                <p>Photoshop | Figma</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--<SERVICES 03></span>-->
+                <div class="services-content">
+                    <div>
+                        <i class="uil uil-pen services-icon"></i>
+                        <h3 class="services-titulo">Back-End <br> Dev</h3>
+                    </div>
+    
+                    <span class="button button-flex button-small button-link services-button">
+                        View More
+                        <i class="uil uil-arrow-right button-icon"></i>
+                    </span>
+    
+                    <div class="services-modal">
+                        <div class="services-modal-content">
+                            <h4 class="services-modal-titulo">Back-End <br> Dev</h4>
+                            <i class="uil uil-times services-modal-close"></i>
+    
+                            <ul class="services-modal-services grid">
+                                <li class="services-modal-service">
+                                    <i class="uil uil-check-circle services-modal-icon"></i>
+                                    <p>JavaScript</p>
+                                </li>
+    
+                                <li class="services-modal-service">
+                                    <i class="uil uil-check-circle services-modal-icon"></i>
+                                    <p>Node JS</p>
+                                </li>
+    
+                                <li class="services-modal-service">
+                                    <i class="uil uil-check-circle services-modal-icon"></i>
+                                    <p>Express</p>
+                                </li>
+    
+                                <li class="services-modal-service">
+                                    <i class="uil uil-check-circle services-modal-icon"></i>
+                                    <p>API</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+    </section>
+
+    <!-- PROJETOS/PORTFOLIO -->
+    <section class="portfolio section" id="projetos">
+        <h2 class="section-titulo">Projetos</h2>
+        <span class="section-subtitulo">Meus projetos</span>
+
+        <div class="portfolio-container container swiper">
+            <div class="swiper-wrapper">
+                <!-- PROJETOS 01-->
+                <div class="portfolio-content grid swiper-slide">
+                    <img src="img/paint.png" alt="" class="portfolio-img">
+
+                    <div class="portfolio-data">
+                        <br>
+                        <h3 class="portfolio-titulo">Paint Recriate</h3>
+                        <p class="portfolio-description">Nesse projeto, foi feito a criação de uma interface intuitiva e interativa utilizando JavaScript para recriar a ferramenta gráfica do Paint.</p>
+                        <a href="https://github.com/pedrofernandxs/paintreacriate" target="_blank" class="button button-flex button-small portfolio-button">
+                            Github
+                            <i class="uil uil-github-alt button-icon"></i>
+                        </a>
+                    </div>
+                </div>
+                <!--
+                <!-- PROJETOS 02-->
+                <div class="portfolio-content grid swiper-slide">
+                    <img src="img/todolisty.jpeg" alt="" class="portfolio-img">
+                    
+                    <div class="portfolio-data">
+                        <br>
+                        <h3 class="portfolio-titulo">To-Do-List Full Stack</h3>
+                        <p class="portfolio-description">Nesse projeto foi utilizado Node.Js, Express, MySQL2, Nodemon, Dotenv e Cors. No Frontend foi utilizado fetch em JS, para consumir os dados da API.</p>
+                        <a href="https://github.com/pedrofernandxs/to-do-list-fullstack" target="_blank" class="button button-flex button-small portfolio-button">
+                            Github
+                            <i class="uil uil-github-alt button-icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PROJETOS 02-->
+                <div class="portfolio-content grid swiper-slide">
+                    <img src="img/LOL.png" alt="" class="portfolio-img">
+
+                    <div class="portfolio-data">
+                        <br>
+                        <h3 class="portfolio-titulo">Login LOL</h3>
+                        <p class="portfolio-description">Nesse projeto foi feito a recriação da tela de login do LOL. Foi utilizado HTML, CSS e JavaScript para a prática de alguns conceitos.</p>
+                        <a href="https://github.com/pedrofernandxs/LoLrecriate" target="_blank" class="button button-flex button-small portfolio-button">
+                            Github
+                            <i class="uil uil-github-alt button-icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="portfolio-content grid swiper-slide">
+                    <img src="img/chat.png" alt="" class="portfolio-img">
+
+                    <div class="portfolio-data">
+                        <br>
+                        <h3 class="portfolio-titulo">Chat Real-Time</h3>
+                        <p class="portfolio-description">Chat funcional em tempo real com webSocket Server, que gerencia a comunicação bidirecional entre users e servidor. Foi utlizado Node JS no Back-End.</p>
+                        <a href="https://github.com/pedrofernandxs/chat-real-time" target="_blank" class="button button-flex button-small portfolio-button">
+                            Github
+                            <i class="uil uil-github-alt button-icon"></i>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+                <div class="swiper-button-next">
+                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="uil uil-angle-left-b swiper-portfolio-icon swiper-portfolio-iconb"></i>
+                </div>
+        </div>     
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <div class="footer-bg">
+            <div class="footer-container container grid">
+                <div>
+                    <h1 class="footer-titulo">Pedro</h1>
+                    <span class="footer-subtitulo">Frontend developer</span>
+                </div>
+
+                <ul class="footer-links">
+                    <li>
+                        <a href="#serviços" class="footer-link">Serviços</a>
+                    </li>
+                    <li>
+                        <a href="#qualificações" class="footer-link">Qualificações</a>
+                    </li>
+                    <li>
+                        <a href="#habilidades" class="footer-link">Habilidades</a>
+                    </li>                    
+                </ul>
+                
+                <div class="footer-socials">
+                    <a href="https://www.linkedin.com/in/pedrofernandxs/" target="_blank" class="footer-social">
+                        <i class="uil uil-linkedin" ></i>
+                    </a>
+                        
+                    <a href="https://www.behance.net/pedrxxt" target="_blank" class="footer-social">
+                        <i class="uil uil-behance"></i>
+                    </a>
+                        
+                    <a href="https://www.instagram.com/pedrxxt/" target="_blank" class="footer-social">
+                        <i class="uil uil-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <p class="footer-copy">&#169; PedroFernandxs. All right reserved.</p>
+        </div>
+    </footer>
+    
+    
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
