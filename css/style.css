@@ -155,7 +155,9 @@ img {
     text-align: center;
 }
 
-/* ======================================= ESTILIZAÇÃO CONTAINERS =======================================*/.container {
+/* ======================================= ESTILIZAÇÃO CONTAINERS =======================================*/
+
+.container {
     max-width: 768px;
     margin-left: var(--m-b-1-5);
     margin-right: var(--m-b-1-5);
@@ -1234,8 +1236,20 @@ img {
 
 /* ======================================= MEDIA QUERIES DESKTOP #1 =======================================*/
 
+@media sreen and (min-width: 969px){
+    .sobre-botoes {
+        position: relative;
+        top: -14px;
+    }
+}
 
 @media screen and (min-width: 1024px) {
+    
+    .sobre-botoes {
+        position: relative;
+        top: -14px;
+    }
+
     .cabeçalho,
     .main,
     .footer-container {
@@ -1250,11 +1264,6 @@ img {
         transform: translate(-6rem);
     }
 
-    .sobre {
-        display: grid;
-        grid-template-columns: .6fr;
-        justify-content: center;
-    }
 
     .swiper-portfolio-icon {
         font-size: 2rem;
@@ -1338,6 +1347,10 @@ img {
         top: 10px;
     }
 
+    .sobre-botoes {
+        position: relative;
+        top: -14px;
+    }
 }
 
 .footer-titulo {
@@ -1348,4 +1361,33 @@ img {
 .footer-subtitulo {
     position: relative;
     top: -19px;
+}
+
+
+/* ======================================= CONTATO =======================================*/
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-data {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.contact-icon {
+    margin-right: var(--m-b-0-25);
+    font-size: 1.8rem;
+    color: var(--primeira-cor);
+}
+
+.contact-linkedin {
+    color: var(--primeira-cor);
+}
+
+.section > .contact-section {
+    padding: 5rem 0;
 }
