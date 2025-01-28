@@ -4,11 +4,12 @@
     /* ======================================= ALTURA DO CABEÇALHO =======================================*/
     --header-altura: 3rem;
 
-   /* ======================================= CORES DO PROJETO =======================================*/
-    --cor-principal: 236; /*MUDA A COR DE TODO O PROJETO*/
+    /* ======================================= CORES DO PROJETO =======================================*/
+    --cor-principal: 236;
+    /*MUDA A COR DE TODO O PROJETO*/
     --primeira-cor: hsl(var(--cor-principal), 69%, 61%);
     --primeira-cor-secundaria: hsl(var(--cor-principal), 69%, 61%);
-    --primeira-cor-alternativa : hsl(var(--cor-principal), 57%, 53%);
+    --primeira-cor-alternativa: hsl(var(--cor-principal), 57%, 53%);
     --primeira-cor-brilho: hsl(var(--cor-principal), 92%, 85%);
     --cor-titulo: hsl(var(--cor-principal), 8%, 15%);
     --cor-texto: hsl(var(--cor-principal), 8%, 45%);
@@ -33,7 +34,7 @@
     --font-media: 500;
     --font-semi-media: 600;
 
-   /* ======================================= MARGIN BOTTOM =======================================*/
+    /* ======================================= MARGIN BOTTOM =======================================*/
     --m-b-0-25: .25rem;
     --m-b-0-5: .5rem;
     --m-b-0-75: .75rem;
@@ -101,7 +102,8 @@ body.dark-theme {
 }
 
 html {
-    scroll-behavior: smooth; /*ROLAGEM FLUIDA DA TELA*/
+    scroll-behavior: smooth;
+    /*ROLAGEM FLUIDA DA TELA*/
 }
 
 body {
@@ -112,18 +114,23 @@ body {
     color: var(--cor-texto);
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     color: var(--cor-titulo);
     font-weight: var(--font-semi-media);
 }
 
 ul {
-    list-style: none; /* TIRAR ESTILIZAÇÃO DA LISTA / NAVBAR*/
+    list-style: none;
+    /* TIRAR ESTILIZAÇÃO DA LISTA / NAVBAR*/
 
 }
 
 a {
-    text-decoration: none; /* TIRAR ESTILIZAÇÃO DOS LINKS */
+    text-decoration: none;
+    /* TIRAR ESTILIZAÇÃO DOS LINKS */
 }
 
 /* ======================================= TAMANHO DAS IMAGENS =======================================*/
@@ -132,7 +139,7 @@ img {
     height: auto;
 }
 
- 
+
 
 /* ======================================= SECTIONS DO PROJETO =======================================*/
 .section {
@@ -218,7 +225,7 @@ img {
         width: 100%;
         background-color: var(--cor-body);
         padding: 2rem 1.5rem 4rem;
-        box-shadow: 0 -1px 4px rgba(0,0,0,.15);
+        box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
         border-radius: 1.5rem 1.5rem 0 0;
         transition: .3s;
     }
@@ -262,7 +269,7 @@ img {
 }
 
 .navbar-close:hover {
-   color: var(--primeira-cor-alternativa);
+    color: var(--primeira-cor-alternativa);
 }
 
 .show-menu {
@@ -558,7 +565,8 @@ img {
 .skills-list {
     max-height: 0;
     overflow: hidden;
-    transition: max-height .7s ease, margin-bottom .7s ease; /* Adiciona uma transição suave */
+    transition: max-height .7s ease, margin-bottom .7s ease;
+    /* Adiciona uma transição suave */
 
 }
 
@@ -576,7 +584,8 @@ img {
 }
 
 .skills-arrow {
-    transition: transform .5s ease; /* Suaviza a rotação da seta */
+    transition: transform .5s ease;
+    /* Suaviza a rotação da seta */
 }
 
 /* ======================================= QUALIFICAÇÕES ESTILIZAÇÃO =======================================*/
@@ -654,8 +663,8 @@ img {
 
 /* ======================================= SERVIÇOS ESTILIZAÇÃO =======================================*/
 .services-container {
-   gap: 1.5rem; 
-   grid-template-columns: repeat(2,1fr);
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 
@@ -664,13 +673,13 @@ img {
     background-color: var(--cor-container);
     padding: 3.5rem .5rem 1.25rem 1.5rem;
     border-radius: .25rem;
-    box-shadow: 0 2px 4px rgba(0,0,0, .15);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
     transition: .3s ease;
 }
 
 
 .services-content:hover {
-    box-shadow: 0 4px 8px rgba(0,0,0, .15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .15);
 }
 
 .services-icon {
@@ -701,7 +710,7 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0, .3);
+    background-color: rgba(0, 0, 0, .3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -725,7 +734,7 @@ img {
 
 .services-modal-service {
     display: flex;
-   
+
 }
 
 .services-modal-titulo {
@@ -764,10 +773,14 @@ img {
 .portfolio-content {
     padding: 0 2rem;
     display: flex;
-    flex-direction: column; /* Para alinhar os itens verticalmente */
-    align-items: center; /* Centraliza horizontalmente */
-    justify-content: center; /* Centraliza verticalmente (se necessário) */
-    text-align: center; /* Alinha o texto ao centro */
+    flex-direction: column;
+    /* Para alinhar os itens verticalmente */
+    align-items: center;
+    /* Centraliza horizontalmente */
+    justify-content: center;
+    /* Centraliza verticalmente (se necessário) */
+    text-align: center;
+    /* Alinha o texto ao centro */
 }
 
 .portfolio-img {
@@ -914,7 +927,7 @@ img {
         font-size: .700rem;
     }
 
-    .services > .section-subtitulo {
+    .services>.section-subtitulo {
         margin: 0 2rem 2rem;
     }
 
@@ -966,11 +979,12 @@ img {
     }
 
     .home-descricao {
-        position: relative; /* Necessário para manipulações precisas */
+        position: relative;
+        /* Necessário para manipulações precisas */
         color: transparent;
     }
 
-    .home-descricao::before{
+    .home-descricao::before {
         content: 'Desenvolvedor em constante evolução, com experiência em tecnologias modernas de Back-end e Front-end, conhecimento em metodologias ágeis, redes e cibersegurança';
         color: var(--cor-texto);
         font-size: var();
@@ -990,7 +1004,7 @@ img {
         padding: 1rem 0 3.5rem;
     }
 
-    .sobre-container{
+    .sobre-container {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -1005,22 +1019,22 @@ img {
     }
 
     .services-modal-content {
-        width: 400px; 
+        width: 400px;
     }
 
     .portfolio-img {
         width: 390px;
     }
 
-    .skills > .section-titulo {
+    .skills>.section-titulo {
         padding-top: 4rem;
     }
 
-    .services > .section-titulo {
+    .services>.section-titulo {
         padding-top: 4rem;
     }
 
-    .portfolio > .section-titulo {
+    .portfolio>.section-titulo {
         padding-top: 4rem;
     }
 
@@ -1029,10 +1043,11 @@ img {
 /* ======================================= MEDIA QUERIES MOBILE #2 =======================================*/
 
 @media screen and (min-width: 768px) {
-    
+
     .home-titulo {
         font-size: var(--grande-fontsize);
     }
+
     .container {
         margin-left: auto;
         margin-right: auto;
@@ -1048,12 +1063,12 @@ img {
 
     .section-subtitulo {
         margin-bottom: 4rem;
-    }      
-    
-    
-    .cabeçalho{
+    }
+
+
+    .cabeçalho {
         top: 0;
-        bottom: initial;       
+        bottom: initial;
     }
 
     .cabeçalho,
@@ -1081,7 +1096,7 @@ img {
     .navbar-menu {
         margin-left: auto;
     }
-    
+
     .change-theme {
         margin: 0;
     }
@@ -1095,7 +1110,7 @@ img {
         column-gap: 2rem;
     }
 
-    .main > .home {
+    .main>.home {
         padding-left: 2rem;
     }
 
@@ -1104,15 +1119,21 @@ img {
     }
 
     .home-descricao {
-        position: static; /* Volta ao padrão ou redefine conforme necessário */
-        color: unset; /* Torna a cor visível novamente, se desejado */
+        position: static;
+        /* Volta ao padrão ou redefine conforme necessário */
+        color: unset;
+        /* Torna a cor visível novamente, se desejado */
     }
 
     .home-descricao::before {
-        content: ''; /* Remove o texto do pseudoelemento */
-        color: unset; /* Reseta a cor */
-        font-size: unset; /* Reseta o tamanho da fonte */
-        position: static; /* Volta ao comportamento padrão */
+        content: '';
+        /* Remove o texto do pseudoelemento */
+        color: unset;
+        /* Reseta a cor */
+        font-size: unset;
+        /* Reseta o tamanho da fonte */
+        position: static;
+        /* Volta ao comportamento padrão */
     }
 
     .home-scroll {
@@ -1126,6 +1147,7 @@ img {
     .sobre-img {
         width: 274px;
     }
+
     .sobre-container {
         column-gap: 5rem;
         margin-right: 10rem;
@@ -1144,11 +1166,12 @@ img {
         justify-content: initial;
     }
 
-    .sobre-container{
+    .sobre-container {
         margin: 0;
         grid-template-columns: repeat(2, 1fr);
         gap: 0;
     }
+
     .sobre-descricao {
         text-align: justify;
     }
@@ -1181,6 +1204,7 @@ img {
     .services-icon {
         font-size: 2rem;
     }
+
     .services-content {
         padding: 6rem 0 2rem 2.5rem;
     }
@@ -1188,7 +1212,7 @@ img {
     .footer-container {
         grid-template-columns: repeat(3, 1fr);
     }
-    
+
     .footer-bg {
         padding: 3rem 0 3.5rem;
     }
@@ -1207,10 +1231,10 @@ img {
     }
 
     .swiper-slide {
-        display: grid !important; 
+        display: grid !important;
     }
-   
-   
+
+
     .portfolio-container,
     .portfolio-content {
         display: grid;
@@ -1236,7 +1260,7 @@ img {
 
 /* ======================================= MEDIA QUERIES DESKTOP #1 =======================================*/
 
-@media sreen and (min-width: 969px){
+@media sreen and (min-width: 969px) {
     .sobre-botoes {
         position: relative;
         top: -14px;
@@ -1244,7 +1268,7 @@ img {
 }
 
 @media screen and (min-width: 1024px) {
-    
+
     .sobre-botoes {
         position: relative;
         top: -14px;
@@ -1330,7 +1354,8 @@ img {
     }
 
 }
- /* ======================================= MEDIA QUERIES DESKTOP #5 =======================================*/
+
+/* ======================================= MEDIA QUERIES DESKTOP #5 =======================================*/
 
 @media screen and (min-width: 1750px) {
     .sobre-container {
@@ -1386,8 +1411,4 @@ img {
 
 .contact-linkedin {
     color: var(--primeira-cor);
-}
-
-.section > .contact-section {
-    padding: 5rem 0;
 }
